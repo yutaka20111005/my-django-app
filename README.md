@@ -91,7 +91,7 @@ AWS ECR (Dockerイメージ保存)
 > **📌 実行前の確認**: 以下の前提条件を満たしていることを確認してください
 > - AWS CLIが設定済み（`aws configure`実行済み、`aws sts get-caller-identity`で確認可能）
 > - Terraformがインストール済み（`terraform version`で確認可能）
-> - GitHubリポジトリの所有者/リポジトリ名を把握している（例: `jack20081214/my-django-app`）
+> - GitHubリポジトリの所有者/リポジトリ名を把握している（例: `your-github-org/your-repo-name`）
 
 ### ステップ1: Terraformの設定
 
@@ -108,7 +108,7 @@ cp terraform.tfvars.example terraform.tfvars
 aws_region         = "ap-northeast-1"
 project_name       = "my-django-app"
 ecr_repository_name = "my-django-app"
-github_repository  = "jack20081214/my-django-app"  # あなたのGitHubリポジトリ
+github_repository  = "your-github-org/your-repo-name"  # あなたのGitHubリポジトリ
 
 image_retention_count = 10
 
