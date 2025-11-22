@@ -199,9 +199,17 @@ env:
 
 **重要**: `ECR_REPOSITORY`の値は、ステップ1の`terraform.tfvars`で設定した`ecr_repository_name`と**完全に一致**させる必要があります。
 
-### ステップ5: Dockerfileの確認
+### ステップ5: Dockerfileとrequirements.txtの確認
 
-プロジェクトルートに`Dockerfile`が存在することを確認してください。存在しない場合は、アプリケーションに合わせて作成してください。
+1. **requirements.txtの確認**:
+   - プロジェクトルートに`requirements.txt`が存在することを確認してください
+   - 必要なパッケージ（Django、gunicorn等）が含まれていることを確認してください
+   - プロジェクト固有の依存関係がある場合は、追加してください
+
+2. **Dockerfileの確認**:
+   - プロジェクトルートに`Dockerfile`が存在することを確認してください
+   - **重要**: `CMD`行の`my_django_app.wsgi:application`は、あなたのDjangoプロジェクト名に合わせて変更してください
+     - 例: プロジェクト名が`myproject`の場合、`myproject.wsgi:application`に変更
 
 ### ステップ6: テスト実行
 

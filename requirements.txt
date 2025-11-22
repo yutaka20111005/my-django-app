@@ -1,0 +1,14 @@
+# Django Framework
+Django>=5.0,<6.0
+
+# WSGI HTTP Server
+gunicorn>=21.2.0
+
+# Database (PostgreSQL support - adjust if using other databases)
+psycopg2-binary>=2.9.9
+dj-database-url>=2.1.0
+
+# Additional useful packages (optional - adjust based on your needs)
+# python-decouple>=3.8  # For environment variable management
+# whitenoise>=6.6.0      # For static file serving in production
+
