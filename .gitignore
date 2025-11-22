@@ -1,3 +1,46 @@
-参考.txt
-参考2.txt
-参考3.txt
+README.md
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform/
+.terraform.lock.hcl
+terraform.tfplan
+*.tfplan
+
+# Environment files
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+# Cursor IDE - user-specific settings (excluded)
+.cursor/
+# Cursor IDE - project rules file (included for team sharing)
+# .cursorrules should be committed to the repository
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
